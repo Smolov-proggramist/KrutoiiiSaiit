@@ -11,15 +11,25 @@
       Нажми, чтобы увидеть и услышать послание от бабушки...
     </div>
     <img id="photo" src="./img/страшна.jpeg" alt="Фото бабушки" />
-    <audio id="audio" src="./audio/scream-81768.mp3"></audio>
+    <audio
+      id="audio"
+      src="./audio/five-nights-at-freddys-full-scream-sound_2.mp3"
+    ></audio>
 
     <script>
-      document.getElementById("message").onclick = function () {
-        document.getElementById("photo").style.display = "block";
-        document.getElementById("flash").style.display = "block";
-        document.getElementById("audio").play();
-        this.style.display = "none";
-      };
+      const message = document.getElementById("message");
+      const photo = document.getElementById("photo");
+      const flash = document.getElementById("flash");
+      const audio = document.getElementById("audio");
+
+      message.addEventListener("click", () => {
+        message.style.display = "none";
+        photo.style.display = "block";
+        flash.style.display = "block";
+        audio.play().catch((err) => {
+          console.error("Аудио не удалось воспроизвести:", err);
+        });
+      });
     </script>
   </body>
 </html>
