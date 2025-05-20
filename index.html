@@ -17,19 +17,11 @@
     ></audio>
 
     <script>
-      const message = document.getElementById("message");
-      const photo = document.getElementById("photo");
-      const flash = document.getElementById("flash");
-      const audio = document.getElementById("audio");
-
-      message.addEventListener("click", () => {
-        message.style.display = "none";
-        photo.style.display = "block";
-        flash.style.display = "block";
-        audio.play().catch((err) => {
-          console.error("Аудио не удалось воспроизвести:", err);
-        });
-      });
+      document.getElementById("message").onclick = function () {
+        document.getElementById("photo").style.display = "block";
+        document.getElementById("audio").play();
+        this.style.display = "none";
+      };
     </script>
   </body>
 </html>
