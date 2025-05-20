@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div id="message">
+      Нажми, чтобы увидеть и услышать послание от бабушки...
+    </div>
+    <img id="photo" src="./img/Без названия (1).jpeg" alt="Фото бабушки" />
+    <audio id="audio" src="./audio/scream-81768.mp3"></audio>
+
+    <script>
+      document.getElementById("message").onclick = function () {
+        document.getElementById("photo").style.display = "block";
+        document.getElementById("audio").play();
+        this.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
