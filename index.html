@@ -10,12 +10,13 @@
     <div id="message">
       Нажми, чтобы увидеть и услышать послание от бабушки...
     </div>
-    <img id="photo" src="./img/Без названия (1).jpeg" alt="Фото бабушки" />
+    <img id="photo" src="./img/страшна.jpeg" alt="Фото бабушки" />
     <audio id="audio" src="./audio/scream-81768.mp3"></audio>
 
     <script>
       document.getElementById("message").onclick = function () {
         document.getElementById("photo").style.display = "block";
+        document.getElementById("flash").style.display = "block";
         document.getElementById("audio").play();
         this.style.display = "none";
       };
